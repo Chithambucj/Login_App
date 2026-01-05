@@ -1,23 +1,7 @@
-<div style="width:300px;margin:120px auto;border:1px solid #ccc;padding:20px">
+<div class="login-container">
   <h2>Login</h2>
-
-  <input
-    type="text"
-    placeholder="Username"
-    [(ngModel)]="loginData.username"
-    style="width:100%;margin-bottom:10px" />
-
-  <input
-    type="password"
-    placeholder="Password"
-    [(ngModel)]="loginData.password"
-    style="width:100%;margin-bottom:10px" />
-
-  <button (click)="login()" style="width:100%">
-    Login
-  </button>
-
-  <p style="color:red" *ngIf="errorMessage">
-    {{ errorMessage }}
-  </p>
+  <input type="text" placeholder="Username" [(ngModel)]="loginData.username">
+  <input type="password" placeholder="Password" [(ngModel)]="loginData.password">
+  <button (click)="login()">Login</button>
+  <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
 </div>
